@@ -16,23 +16,23 @@ pygmentscodefences = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
-  sitename = "Hugo Tanka Theme"
+  sitename = "Rosie Abe's Data Stuff"
 
 [[menu.main]]
     name = "Home"
-    url = "https://nanx.me"
+    url = "https://rosieabe.com"
     weight = 1
 [[menu.main]]
     name = "GitHub"
-    url = "https://github.com/road2stat"
+    url = "https://github.com/rosieabe"
     weight = 2
 [[menu.main]]
     name = "LinkedIn"
-    url = "https://www.linkedin.com/in/road2stat"
+    url = "https://www.linkedin.com/in/rosieabe/"
     weight = 3
 [[menu.main]]
     name = "Twitter"
-    url = "https://twitter.com/road2stat"
+    url = "https://twitter.com/rosieabe"
     weight = 4
 [[menu.main]]
     name = "RSS"
