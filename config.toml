@@ -13,7 +13,7 @@ disable_mathjax = false
 pygmentsstyle      = "vs"
 pygmentscodefences = true
 
-ignoreFiles = ["_files$", "_cache$"]
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
   sitename = "Rosie Abe's Data Stuff"

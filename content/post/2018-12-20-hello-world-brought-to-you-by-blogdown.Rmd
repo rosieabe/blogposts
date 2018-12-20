@@ -3,6 +3,7 @@ title: Hello World! Brought to you by blogdown
 author: Rosie
 date: '2018-12-20'
 slug: hello-world-brought-to-you-by-blogdown
+draft: no
 categories:
   - Off-Topic
 tags:
