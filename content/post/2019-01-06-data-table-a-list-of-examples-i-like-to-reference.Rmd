@@ -1,17 +1,17 @@
 ---
 title: data.table - A list of examples I like to reference
 author: Rosie
-date: '2019-01-29'
+date: '2019-01-06'
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 3
 slug: data-table-a-list-of-examples-i-like-to-reference
 categories:
   - R
   - Reference
 tags:
   - data.table
-output:
-  html_document:
-    toc: true
-    toc_depth: 3
 ---
 
 I use the `data.table` package quite a bit at work and it's become my preferred way to work with data in R, even with smaller data sizes. As much as the tidyverse is readable and smart, there is something about `data.table` syntax that I've really come to appreciate. It's harder to read, but quicker to type. But the readability becomes an issue sometimes, since I might forget tips and tricks that have been useful in the past.
@@ -25,7 +25,7 @@ If you do happen to be a beginner, I highly suggest taking a look at [their trai
 
 ## Tips and Tricks List:
 
-### Ordering data using `frank()` and `setorder()` 
+### Ordering data by multiple columns using `frank()` and `setorder()` 
 In my work I often find myself with a collection of records where a single record can have multiple values. Sometimes you want to rank your whole dataset or sometimes you might want to rank by group. First tip is if you do need the rank values for your entire table, the `frank()` function provided with the `data.table` package will do the job. It is pretty fast, even when ranking by groups over a million rows. In the exa
 
 An example that I might face can be seen in the below snippet of code. Even if I increased the sample to 100M rows, I am able to run the below code on my bottom of the line MacBook Pro.
