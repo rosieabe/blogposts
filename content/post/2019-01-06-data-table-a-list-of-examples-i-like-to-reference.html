@@ -11,7 +11,7 @@
 
 <meta name="author" content="Rosie" />
 
-<meta name="date" content="2019-01-29" />
+<meta name="date" content="2019-01-06" />
 
 <title>data.table - A list of examples I like to reference</title>
 
@@ -187,7 +187,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">data.table - A list of examples I like to reference</h1>
 <h4 class="author"><em>Rosie</em></h4>
-<h4 class="date"><em>2019-01-29</em></h4>
+<h4 class="date"><em>2019-01-06</em></h4>
 
 </div>
 
@@ -237,7 +237,7 @@ dt1</code></pre>
 ## 10000000: J 535104</code></pre>
 <pre class="r"><code>system.time(dt1[, B_rank := frank(B), A])</code></pre>
 <pre><code>##    user  system elapsed 
-##   2.351   0.149   0.643</code></pre>
+##   2.348   0.171   0.673</code></pre>
 <pre class="r"><code># Increase to 10M
 set.seed(1234)
 vals &lt;- sample(10000000, replace = T)
@@ -258,7 +258,7 @@ dt2</code></pre>
 ## 100000000: J 9922068</code></pre>
 <pre class="r"><code>system.time(dt2[, B_rank := frank(B), A])</code></pre>
 <pre><code>##    user  system elapsed 
-##  23.952   1.357   8.201</code></pre>
+##  24.361   2.030   9.974</code></pre>
 <pre class="r"><code>        #    A       B  B_rank
         # 1: A 1137035 1139316
         # 2: B 6222995 6218296
@@ -271,7 +271,7 @@ dt1 &lt;- data.table(A = rep(LETTERS[1:10], 1000000),
                  B = vals)
 system.time(setorder(dt1, A, B))</code></pre>
 <pre><code>##    user  system elapsed 
-##   1.808   0.123   0.506</code></pre>
+##   1.713   0.151   0.516</code></pre>
 <pre class="r"><code># Increase to 10M
 set.seed(1234)
 vals &lt;- sample(10000000, replace = T)
@@ -279,7 +279,7 @@ dt2 &lt;- data.table(A = rep(LETTERS[1:10], 10000000),
                  B = vals)
 system.time(setorder(dt2, A, B))</code></pre>
 <pre><code>##    user  system elapsed 
-##  18.724   1.422   5.392</code></pre>
+##  17.269   1.489   5.495</code></pre>
 <p>I just used simple benchmarking here but you can see particularly for the bigger dataset that the ordering is much faster than creating the column with rank values. From here you can add your own primitive rank or you could extract the top row(s) by group.</p>
 <pre class="r"><code># You can add a primitive version of a rank, and altogether the operation would be faster than frank()
 # that said, it does not handle ties in any particularly good way.
@@ -287,7 +287,7 @@ dt2 &lt;- data.table(A = rep(LETTERS[1:10], 10000000),
                  B = vals)
 system.time(setorder(dt2, A, B)[, B_rank := seq(1:.N), A])</code></pre>
 <pre><code>##    user  system elapsed 
-##  20.818   1.467   6.317</code></pre>
+##  19.614   1.591   6.538</code></pre>
 <pre class="r"><code>dt2
 
 # Extract top 1 row
@@ -307,11 +307,11 @@ dt2[dt2[, .I[1], A]$V1]</code></pre>
 ## 10: J 5142512</code></pre>
 <pre class="r"><code>system.time(dt2[dt2[, .I[1], A]$V1])</code></pre>
 <pre><code>##    user  system elapsed 
-##   5.784   1.090   1.864</code></pre>
+##   5.411   1.099   1.821</code></pre>
 <pre class="r"><code># OR
 system.time(dt2[dt2[, head(.I, 1), A]$V1]) #better if picking more than 1 (in my opinion!)</code></pre>
 <pre><code>##    user  system elapsed 
-##   5.767   1.087   1.854</code></pre>
+##   5.716   1.084   1.841</code></pre>
 <p>For a quick explanation: the <code>dt2[, .I[1], A]$V1</code> expression which is inside the <code>dt2[]</code> i argument is returning the first row number for each group in column A. <code>dt2[dt2[, head(.I, 1), A]$V1]</code> is a good option, <em>PARTICULARLY</em> if you are not sure if choosing the top 5 rows per group and you are not sure if each group has 5 values. BTW, the <code>.I</code> notation I will go over in a tip further down.</p>
 <hr />
 </div>

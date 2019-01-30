@@ -1,7 +1,7 @@
 ---
 title: data.table - A list of examples I like to reference
 author: Rosie
-date: '2019-01-29'
+date: '2019-01-06'
 slug: data-table-a-list-of-examples-i-like-to-reference
 categories:
   - R
