@@ -1,6 +1,6 @@
 baseurl = "/"
-title = "Hugo Tanka Theme"
-author = "Nan Xiao"
+title = "Rosie Abe's Data Blog"
+author = "Rosie"
 relativeurls = true
 canonifyurls = true
 languagecode = "en"
