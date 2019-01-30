@@ -17,17 +17,8 @@
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/hello-world-brought-to-you-by-blogdown/</guid>
-      <description>So I thought I’d make my first post here about how the process for me, a non-web-developer, non-guru-nor-R-master to create this blog, host it, and then tie it to this domain. TL;DR not 100% smooth for the truest of noobs, but mostly painless.
+      <description>So I thought I’d make my first post here about the process for me, a non-web-developer, non-guru-nor-R-master to create this blog, host it, and then tie it to this domain. TL;DR not 100% smooth for the truest of noobs, but mostly painless.
 I’ll quickly name off the steps that I took after reading Yihui’s blogdown book, found here. You honestly don’t need to read this post to make a blogdown blog, and of course there are other ways to go about this also mentioned in the book, but I’m just documenting some things that I’ve done, personally.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>/post/hello-world/</link>
-      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hello-world/</guid>
-      <description>Hello World~!</description>
     </item>
     
   </channel>

@@ -6,10 +6,19 @@
     <description>Recent content on Hugo Tanka Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>data.table - A list of examples I like to reference</title>
+      <link>/post/data-table-a-list-of-examples-i-like-to-reference/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/data-table-a-list-of-examples-i-like-to-reference/</guid>
+      <description>Warning: This is not particularly intended for beginner data.table users Tips and Tricks List: Ordering data by multiple columns using frank() and setorder() Fill NAs in a data.table using set() Writing functions/procedures containing data.tables – Sometimes modifying the input data.table is OK, but be sure you know exactly what you’re doing! What the heck is .I? What the heck is CJ()?    I use the data.table package quite a bit at work and it’s become my preferred way to work with data in R, even with smaller data sizes.</description>
+    </item>
     
     <item>
       <title>Hello World! Brought to you by blogdown</title>
@@ -17,17 +26,8 @@
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/hello-world-brought-to-you-by-blogdown/</guid>
-      <description>So I thought I’d make my first post here about how the process for me, a non-web-developer, non-guru-nor-R-master to create this blog, host it, and then tie it to this domain. TL;DR not 100% smooth for the truest of noobs, but mostly painless.
+      <description>So I thought I’d make my first post here about the process for me, a non-web-developer, non-guru-nor-R-master to create this blog, host it, and then tie it to this domain. TL;DR not 100% smooth for the truest of noobs, but mostly painless.
 I’ll quickly name off the steps that I took after reading Yihui’s blogdown book, found here. You honestly don’t need to read this post to make a blogdown blog, and of course there are other ways to go about this also mentioned in the book, but I’m just documenting some things that I’ve done, personally.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>/post/hello-world/</link>
-      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hello-world/</guid>
-      <description>Hello World~!</description>
     </item>
     
   </channel>
